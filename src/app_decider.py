@@ -9,3 +9,13 @@ def app_decider(task1, task2):
         return "clean windows"
 
 
+task_dictionary = {'wash dishes': ['wash clothes'],
+                   'cook dinner': ['do ironing'],
+                   'clean windows': ['do ironing'],
+                   'do ironing': ['wash clothes', 'wash dishes'],
+                   'wash clothes': ['cook dinner', 'clean windows']
+}
+
+for winner_task in task_dictionary:
+    if task2 in winner_task[]:
+        return winner_task
